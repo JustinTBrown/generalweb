@@ -1,0 +1,80 @@
+// Grid
+@import 'neat/neat';
+// $small: new-breakpoint(max-width 480px);
+$medium: new-breakpoint(min-width 480px);
+$large: new-breakpoint(min-width 769px); 
+
+// Colours
+$blue: #1E299C;
+$white: #fff;
+$light-blue: #4990E2;
+
+// Typography
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=0d11dd6b-cfd7-4a35-a414-1c5c8c60a143");
+@font-face{
+  font-family:"Avenir LT Medium";
+  src:url("/fonts/e0542193-b2e6-4273-bc45-39d4dfd3c15b.eot?#iefix");
+  src:url("/fonts/e0542193-b2e6-4273-bc45-39d4dfd3c15b.eot?#iefix") format("eot"),url("/fonts/17b90ef5-b63f-457b-a981-503bb7afe3c0.woff2") format("woff2"),url("/fonts/c9aeeabd-dd65-491d-b4be-3e0db9ae47a0.woff") format("woff"),url("/fonts/25f994de-d13f-4a5d-a82b-bf925a1e054d.ttf") format("truetype"),url("/fonts/3604edbd-784e-4ca7-b978-18836469c62d.svg#3604edbd-784e-4ca7-b978-18836469c62d") format("svg");
+}
+@font-face{
+  font-family:"Avenir LT Heavy";
+  src:url("/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
+  src:url("/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"),url("/fonts/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"),url("/fonts/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"),url("/fonts/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype"),url("/fonts/20577853-40a7-4ada-a3fb-dd6e9392f401.svg#20577853-40a7-4ada-a3fb-dd6e9392f401") format("svg");
+}
+$font-stack-headline: "Avenir LT Heavy", "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+$font-stack-body: "Avenir LT Medium", "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+
+body {
+  color: $white;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+}
+h1, h2, h3 {
+  font-family: $font-stack-headline;
+  font-weight: normal;
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+
+  &::after {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    top: 2rem;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    content: "";
+  }
+}
+p {
+  font-family: $font-stack-body;
+  letter-spacing: 0.1rem;
+}
+p.byline {
+  font-size: 2rem;
+}
+a {
+  color: $white;
+  text-decoration: none;
+  &:focus,
+  &:hover {
+    color: $light-blue;
+  }
+}
+
+// Main Page
+body {
+  background-color: $blue;
+  padding: 18vh 1rem;
+  // padding-left: 30%;
+  section.welcome {
+    @include media($large) {
+      margin-left: 20%;
+      max-width: 500px;
+      
+    }
+  }
+}
